@@ -1,19 +1,27 @@
-package prac;
 
 import java.util.Scanner;
 
-public class Java_star_A3 {
+public class JAVA_P11 {
 
     public static void main(String[] args) {
-        System.out.println("몇줄까지 별을 찍을까요? 숫자를 적어주세요.");
+        // 환율계산기
+        System.out.println("1. South Korean won -> United States Dollar");
+        System.out.println("2. United States Dollar -> South Korean won");
         Scanner scan = new Scanner(System.in);
+        int country = scan.nextInt();
         int num = scan.nextInt();
+        int i = country;
+        int j = num;
+        double d =  1322;
 
-
-        for(int i = 1; i<=num;i++) {
-            scan.close();
-
+        if(country==1) {
+            System.out.print( Math.ceil(j/d) + "달러 입니다");
         }
+        else {
+            System.out.println(j * d + "원 입니다");
+        }
+
     }
+
 
 }
