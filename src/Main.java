@@ -1,27 +1,21 @@
+package java07;
 
-import java.util.Scanner;
-
-public class JAVA_P11 {
+public class java_a9 {
 
     public static void main(String[] args) {
-        // 환율계산기
-        System.out.println("1. South Korean won -> United States Dollar");
-        System.out.println("2. United States Dollar -> South Korean won");
-        Scanner scan = new Scanner(System.in);
-        int country = scan.nextInt();
-        int num = scan.nextInt();
-        int i = country;
-        int j = num;
-        double d =  1322;
+        int n = 11;
+        int count = 0;
+        for(int i=2;i<=n;i++) {
+            for(int j=2;j<=i;j++) {
+                if(i % j == 0 ) {
+                    count++;
+                }
 
-        if(country==1) {
-            System.out.print( Math.ceil(j/d) + "달러 입니다");
+            } if(count==1) {
+                System.out.println(i);
+            }
+            count=0;
         }
-        else {
-            System.out.println(j * d + "원 입니다");
-        }
-
     }
-
 
 }
